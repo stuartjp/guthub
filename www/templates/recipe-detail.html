@@ -1,0 +1,10 @@
+﻿<ion-view view-title="{{ recipe.title }}">
+    <ion-content class="padding">
+        <img class="recipe-image" ng-src="{{ recipe.image_url }}" />
+        <!-- bug. button fires ng-click twice. using <a> tag does not and behaviour seems the same. -->
+        <!--<button class="button icon-left ion-star button-positive" ng-click="addFavourite(recipe)" ng-show="!recipe.addedToFavourites">Add</button>
+        <button class="button icon-left ion-star button-negative" ng-click="removeFavourite(recipe)" ng-show="recipe.addedToFavourites">Remove</button>-->
+        <a class="button icon-left ion-star button-positive" ng-click="addFavourite(recipe)" ng-show="!recipe.addedToFavourites">Add</a>
+        <a class="button icon-left ion-star button-negative" ng-click="removeFavourite(recipe)" ng-show="recipe.addedToFavourites">Remove</a>
+    </ion-content>
+</ion-view>

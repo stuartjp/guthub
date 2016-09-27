@@ -1,0 +1,12 @@
+﻿<ion-view view-title="your favourites">
+    <ion-content>
+        <ion-list>
+            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="recipe in favourites" type="item-text-wrap" href="#/tab/recipes/{{recipe.recipe_id}}">
+                <img ng-src="{{ recipe.image_url }} " />
+                <h2>{{ recipe.title }}</h2>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+                <ion-option-button class="button-assertive" ng-click="removeFavourite(recipe)">remove</ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
